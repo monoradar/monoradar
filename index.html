@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MONO RADAR｜いま売れてるモノには、理由がある。</title>
+  <title>MONO RADAR｜家事の「めんどくさい」を、モノで減らす。</title>
 
   <meta
     name="description"
-    content="MONO RADAR（モノレーダー）は、SNSやネットで話題のモノを探知し、売れている理由・選び方・比較ポイントを分かりやすく紹介する商品発見メディアです。"
+    content="MONO RADAR（モノレーダー）は、掃除・洗濯・料理・食器洗い・片付けなど、毎日の家事をラクにする時短家電・便利グッズを調査・比較するメディアです。"
   >
 
   <style>
@@ -45,7 +45,7 @@
         "YuGothic",
         "Noto Sans JP",
         sans-serif;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     a {
@@ -53,17 +53,10 @@
       text-decoration: none;
     }
 
-    img {
-      width: 100%;
-      display: block;
-    }
-
     .container {
       width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
-
-    /* HEADER */
 
     header {
       padding: 24px 0;
@@ -80,7 +73,7 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
       font-weight: 900;
       letter-spacing: -0.04em;
     }
@@ -122,30 +115,24 @@
 
     nav {
       display: flex;
-      gap: 28px;
+      gap: 26px;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.04em;
     }
 
     nav a:hover {
       opacity: 0.55;
     }
 
-    /* HERO */
-
     .hero {
-      min-height: 650px;
-      display: grid;
-      align-items: center;
-      padding: 90px 0;
+      padding: 100px 0 90px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      align-items: center;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 70px;
+      align-items: center;
     }
 
     .eyebrow {
@@ -154,7 +141,7 @@
       gap: 9px;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       margin-bottom: 28px;
     }
 
@@ -167,29 +154,25 @@
     }
 
     .hero h1 {
-      font-size: clamp(50px, 8vw, 104px);
-      line-height: 0.92;
-      letter-spacing: -0.07em;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
       font-weight: 950;
-      margin-bottom: 34px;
-    }
-
-    .hero h1 span {
-      display: block;
+      margin-bottom: 30px;
     }
 
     .hero-copy {
-      font-size: clamp(19px, 2.2vw, 30px);
-      line-height: 1.45;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.4;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
     }
 
     .hero-sub {
       color: var(--sub);
       font-size: 15px;
-      max-width: 600px;
+      max-width: 620px;
     }
 
     .hero-radar {
@@ -197,7 +180,7 @@
       aspect-ratio: 1 / 1;
       border: 3px solid var(--line);
       border-radius: 50%;
-      max-width: 380px;
+      max-width: 360px;
       width: 100%;
       margin-left: auto;
     }
@@ -258,23 +241,8 @@
       border-radius: 50%;
     }
 
-    .signal::before {
-      content: "";
-      position: absolute;
-      width: 34px;
-      height: 34px;
-      border-top: 3px solid var(--yellow);
-      border-right: 3px solid var(--yellow);
-      border-radius: 50%;
-      top: -18px;
-      left: 5px;
-      transform: rotate(-10deg);
-    }
-
-    /* SECTION COMMON */
-
     section {
-      padding: 100px 0;
+      padding: 96px 0;
       border-top: 1px solid var(--border);
     }
 
@@ -283,7 +251,7 @@
       justify-content: space-between;
       align-items: flex-end;
       gap: 30px;
-      margin-bottom: 48px;
+      margin-bottom: 46px;
     }
 
     .section-number {
@@ -295,24 +263,105 @@
     }
 
     .section-title {
-      font-size: clamp(36px, 5vw, 66px);
+      font-size: clamp(36px, 5vw, 64px);
       line-height: 1;
       font-weight: 950;
       letter-spacing: -0.055em;
     }
 
     .section-description {
-      max-width: 390px;
+      max-width: 420px;
       color: var(--sub);
       font-size: 14px;
     }
 
-    /* TRENDING */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1.5px solid var(--line);
+      border-left: 1.5px solid var(--line);
+    }
+
+    .problem-card {
+      min-height: 180px;
+      background: var(--card);
+      border-right: 1.5px solid var(--line);
+      border-bottom: 1.5px solid var(--line);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .problem-card:hover {
+      background: var(--yellow);
+      transform: translateY(-2px);
+    }
+
+    .problem-no {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .problem-title {
+      font-size: 22px;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+    }
+
+    .problem-sub {
+      font-size: 12px;
+      color: var(--sub);
+      margin-top: 6px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .pain-card {
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      padding: 30px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pain-label {
+      display: inline-block;
+      width: fit-content;
+      background: var(--yellow);
+      border: 1.5px solid var(--line);
+      padding: 4px 9px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .pain-card h3 {
+      font-size: 26px;
+      line-height: 1.35;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .pain-card p {
+      color: var(--sub);
+      font-size: 14px;
+    }
 
     .feature-card {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      min-height: 430px;
+      grid-template-columns: 0.9fr 1.1fr;
+      min-height: 390px;
       border: 2px solid var(--line);
       background: var(--card);
     }
@@ -321,75 +370,44 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 50px;
       background: var(--yellow);
       border-right: 2px solid var(--line);
+      padding: 48px;
     }
 
-    .fan-icon {
-      width: 180px;
-      height: 260px;
+    .dishwasher-icon {
+      width: 220px;
+      height: 180px;
+      border: 4px solid var(--line);
+      background: var(--bg);
       position: relative;
     }
 
-    .fan-head {
-      width: 170px;
-      height: 170px;
-      border: 4px solid var(--line);
-      border-radius: 50%;
-      position: absolute;
-      left: 5px;
-      top: 0;
-      background: var(--bg);
-    }
-
-    .fan-head::before,
-    .fan-head::after {
+    .dishwasher-icon::before {
       content: "";
       position: absolute;
-      background: var(--line);
-      left: 50%;
-      top: 50%;
-      transform-origin: left center;
+      left: 18px;
+      right: 18px;
+      top: 22px;
+      height: 26px;
+      border-bottom: 3px solid var(--line);
     }
 
-    .fan-head::before {
-      width: 62px;
-      height: 8px;
-      transform: rotate(35deg);
-    }
-
-    .fan-head::after {
-      width: 62px;
-      height: 8px;
-      transform: rotate(155deg);
-    }
-
-    .fan-center {
-      width: 28px;
-      height: 28px;
-      background: var(--yellow);
-      border: 4px solid var(--line);
-      border-radius: 50%;
+    .dishwasher-window {
       position: absolute;
-      left: 76px;
-      top: 71px;
-      z-index: 2;
-    }
-
-    .fan-handle {
-      position: absolute;
-      width: 55px;
-      height: 100px;
-      border: 4px solid var(--line);
-      border-top: 0;
-      background: var(--bg);
-      left: 63px;
-      bottom: 0;
+      left: 26px;
+      right: 26px;
+      top: 62px;
+      bottom: 20px;
+      border: 3px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 48px;
+      font-weight: 900;
     }
 
     .feature-copy {
-      padding: 58px;
+      padding: 54px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -404,49 +422,41 @@
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 0.1em;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .feature-copy h3 {
-      font-size: clamp(30px, 4vw, 52px);
-      line-height: 1.13;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.17;
       letter-spacing: -0.05em;
       font-weight: 950;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .feature-copy p {
       color: var(--sub);
-      margin-bottom: 32px;
       font-size: 15px;
+      margin-bottom: 28px;
     }
 
-    .text-link {
+    .button {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      font-size: 14px;
-    }
-
-    .arrow {
-      width: 37px;
-      height: 37px;
+      justify-content: center;
+      width: fit-content;
+      min-height: 46px;
+      padding: 0 18px;
       border: 2px solid var(--line);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      transition: 0.2s ease;
+      font-size: 13px;
+      font-weight: 900;
+      background: var(--card);
     }
 
-    .text-link:hover .arrow {
+    .button:hover {
       background: var(--yellow);
-      transform: translateX(4px);
     }
 
-    /* ARTICLE GRID */
-
-    .articles-grid {
+    .article-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
@@ -455,8 +465,8 @@
     .article-card {
       background: var(--card);
       border: 1.5px solid var(--line);
+      min-height: 300px;
       padding: 28px;
-      min-height: 310px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -464,28 +474,22 @@
     }
 
     .article-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 7px 7px 0 var(--yellow);
     }
 
     .article-no {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
-      letter-spacing: 0.08em;
-    }
-
-    .article-icon {
-      font-size: 45px;
-      margin: 24px 0;
-      filter: grayscale(1);
+      letter-spacing: 0.1em;
     }
 
     .article-card h3 {
       font-size: 22px;
       line-height: 1.35;
-      font-weight: 900;
-      letter-spacing: -0.035em;
-      margin-bottom: 13px;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
     }
 
     .article-card p {
@@ -493,48 +497,51 @@
       font-size: 13px;
     }
 
-    /* CATEGORIES */
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      border-top: 1.5px solid var(--line);
-      border-left: 1.5px solid var(--line);
-    }
-
-    .category {
-      min-height: 160px;
-      background: var(--card);
-      border-right: 1.5px solid var(--line);
-      border-bottom: 1.5px solid var(--line);
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .status {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 20px;
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      font-size: 10px;
       font-weight: 900;
-      transition: background 0.2s ease;
+      letter-spacing: 0.08em;
     }
 
-    .category:hover {
-      background: var(--yellow);
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .category span:first-child {
-      font-size: 11px;
-      letter-spacing: 0.12em;
+    .how-card {
+      border-top: 3px solid var(--line);
+      padding-top: 20px;
     }
 
-    .category span:last-child {
-      font-size: 19px;
+    .how-no {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--sub);
+      margin-bottom: 12px;
     }
 
-    /* ABOUT */
+    .how-card h3 {
+      font-size: 22px;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .how-card p {
+      color: var(--sub);
+      font-size: 13px;
+    }
 
     .about-grid {
       display: grid;
       grid-template-columns: 0.7fr 1.3fr;
       gap: 80px;
-      align-items: start;
     }
 
     .about-label {
@@ -544,47 +551,43 @@
     }
 
     .about-copy h2 {
-      font-size: clamp(35px, 5vw, 62px);
+      font-size: clamp(34px, 5vw, 60px);
       line-height: 1.18;
       font-weight: 950;
       letter-spacing: -0.055em;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
     .about-copy p {
       color: var(--sub);
-      margin-bottom: 18px;
-      max-width: 700px;
+      margin-bottom: 16px;
+      max-width: 720px;
     }
 
     .about-highlight {
-      margin-top: 42px;
-      padding: 25px 0;
+      margin-top: 36px;
+      padding: 24px 0;
       border-top: 2px solid var(--line);
       border-bottom: 2px solid var(--line);
       font-size: 21px;
       font-weight: 900;
     }
 
-    /* DISCLOSURE */
-
     .disclosure {
-      padding: 50px 0;
+      padding: 42px 0;
       border-top: 1px solid var(--border);
     }
 
     .disclosure p {
-      max-width: 850px;
+      max-width: 860px;
       color: var(--sub);
       font-size: 12px;
     }
 
-    /* FOOTER */
-
     footer {
       background: var(--text);
       color: var(--bg);
-      padding: 65px 0 35px;
+      padding: 62px 0 34px;
     }
 
     .footer-main {
@@ -592,11 +595,11 @@
       justify-content: space-between;
       align-items: flex-end;
       gap: 40px;
-      margin-bottom: 70px;
+      margin-bottom: 64px;
     }
 
     .footer-logo {
-      font-size: clamp(42px, 7vw, 84px);
+      font-size: clamp(42px, 7vw, 80px);
       line-height: 0.9;
       letter-spacing: -0.07em;
       font-weight: 950;
@@ -610,42 +613,35 @@
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.18);
-      padding-top: 22px;
+      padding-top: 20px;
       display: flex;
       justify-content: space-between;
-      gap: 25px;
+      gap: 20px;
       font-size: 11px;
       opacity: 0.55;
     }
-
-    /* MOBILE */
 
     @media (max-width: 900px) {
       nav {
         display: none;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 75px 0;
-      }
-
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 55px;
+        gap: 50px;
       }
 
       .hero-radar {
         margin: 0 auto;
-        max-width: 300px;
+        max-width: 290px;
       }
 
-      .section-head {
-        display: block;
+      .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .section-description {
-        margin-top: 22px;
+      .pain-grid {
+        grid-template-columns: 1fr;
       }
 
       .feature-card {
@@ -653,22 +649,21 @@
       }
 
       .feature-visual {
-        min-height: 330px;
         border-right: 0;
         border-bottom: 2px solid var(--line);
       }
 
-      .articles-grid {
+      .article-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .how-grid {
+        grid-template-columns: 1fr;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 34px;
       }
     }
 
@@ -677,36 +672,28 @@
         width: min(calc(100% - 28px), var(--max));
       }
 
-      .brand-name {
-        font-size: 17px;
+      .hero {
+        padding: 72px 0;
       }
 
       .hero h1 {
-        font-size: 55px;
-      }
-
-      .hero-copy {
-        font-size: 21px;
+        font-size: 54px;
       }
 
       section {
         padding: 72px 0;
       }
 
-      .feature-copy {
-        padding: 32px 26px;
-      }
-
-      .articles-grid {
+      .problem-grid {
         grid-template-columns: 1fr;
       }
 
-      .category-grid {
-        grid-template-columns: 1fr 1fr;
+      .article-grid {
+        grid-template-columns: 1fr;
       }
 
-      .category {
-        min-height: 130px;
+      .feature-copy {
+        padding: 32px 26px;
       }
 
       .footer-main {
@@ -714,17 +701,12 @@
       }
 
       .footer-copy {
-        margin-top: 35px;
+        margin-top: 34px;
         text-align: left;
       }
 
       .footer-bottom {
         display: block;
-      }
-
-      .footer-bottom span {
-        display: block;
-        margin-bottom: 8px;
       }
     }
   </style>
@@ -732,27 +714,21 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="container header-inner">
-
       <a href="#" class="brand">
         <div class="radar-mini"></div>
         <div class="brand-name">MONO RADAR</div>
       </a>
 
       <nav>
-        <a href="#trending">TRENDING</a>
-        <a href="#new">NEW RADAR</a>
-        <a href="#category">CATEGORY</a>
+        <a href="#problems">悩みから探す</a>
+        <a href="#latest">最新記事</a>
         <a href="#about">ABOUT</a>
       </nav>
-
     </div>
   </header>
 
-
-  <!-- HERO -->
   <main>
 
     <section class="hero">
@@ -761,23 +737,24 @@
         <div>
           <div class="eyebrow">
             <span class="eyebrow-dot"></span>
-            PRODUCT DISCOVERY MEDIA
+            HOUSEWORK EFFICIENCY MEDIA
           </div>
 
           <h1>
-            <span>MONO</span>
-            <span>RADAR.</span>
+            MONO<br>
+            RADAR.
           </h1>
 
           <p class="hero-copy">
-            いま売れてるモノには、<br>
-            理由がある。
+            家事の「めんどくさい」を、<br>
+            モノで減らす。
           </p>
 
           <p class="hero-sub">
-            SNSやネットで話題のモノを探知。
-            「なぜ売れてる？」「本当に便利？」「どれがいい？」
-            を調べて、分かりやすく紹介します。
+            掃除、洗濯、料理、食器洗い、片付け。
+            毎日の家事を「もっと早く」ではなく、
+            「そもそも減らせないか？」という視点で、
+            時短家電・便利グッズを調査します。
           </p>
         </div>
 
@@ -792,203 +769,287 @@
     </section>
 
 
-    <!-- TRENDING -->
-    <section id="trending">
+    <section id="problems">
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="section-number">01 / NOW DETECTING</div>
-            <h2 class="section-title">TRENDING</h2>
+            <div class="section-number">01 / PROBLEM</div>
+            <h2 class="section-title">減らしたい家事は？</h2>
           </div>
 
           <p class="section-description">
-            SNS、EC、検索トレンドから、
-            今注目されているモノをピックアップ。
+            商品からではなく、まず「面倒な家事」から探します。
           </p>
         </div>
 
+        <div class="problem-grid">
+
+          <a href="#dishwashing" class="problem-card">
+            <div class="problem-no">01</div>
+            <div>
+              <div class="problem-title">食器洗い</div>
+              <div class="problem-sub">洗う・すすぐ・拭くを減らしたい</div>
+            </div>
+          </a>
+
+          <a href="#cleaning" class="problem-card">
+            <div class="problem-no">02</div>
+            <div>
+              <div class="problem-title">掃除</div>
+              <div class="problem-sub">床掃除や水回りをラクにしたい</div>
+            </div>
+          </a>
+
+          <a href="#laundry" class="problem-card">
+            <div class="problem-no">03</div>
+            <div>
+              <div class="problem-title">洗濯</div>
+              <div class="problem-sub">干す・取り込む・整えるを減らしたい</div>
+            </div>
+          </a>
+
+          <a href="#cooking" class="problem-card">
+            <div class="problem-no">04</div>
+            <div>
+              <div class="problem-title">料理</div>
+              <div class="problem-sub">平日の調理時間を短くしたい</div>
+            </div>
+          </a>
+
+          <a href="#storage" class="problem-card">
+            <div class="problem-no">05</div>
+            <div>
+              <div class="problem-title">片付け</div>
+              <div class="problem-sub">戻す・探す・散らかるを減らしたい</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="section-number">02 / PAIN POINTS</div>
+            <h2 class="section-title">よくある「めんどくさい」</h2>
+          </div>
+        </div>
+
+        <div class="pain-grid">
+
+          <article class="pain-card" id="dishwashing">
+            <div>
+              <span class="pain-label">食器洗い</span>
+              <h3>毎日の食器洗いを、できるだけ減らしたい。</h3>
+            </div>
+            <p>
+              洗う時間だけでなく、予洗い・すすぎ・拭き・片付けまで含めて、
+              どこまで作業を減らせるかを考えます。
+            </p>
+          </article>
+
+          <article class="pain-card" id="cleaning">
+            <div>
+              <span class="pain-label">掃除</span>
+              <h3>床掃除を、毎回自分でやりたくない。</h3>
+            </div>
+            <p>
+              掃除機を出す、移動する、片付ける。
+              その一連の作業を自動化できるモノを探します。
+            </p>
+          </article>
+
+          <article class="pain-card" id="laundry">
+            <div>
+              <span class="pain-label">洗濯</span>
+              <h3>洗濯物を干す作業を、できればなくしたい。</h3>
+            </div>
+            <p>
+              洗うだけで終わらないのが洗濯。
+              干す・取り込む・乾かす工程を減らす方法を比較します。
+            </p>
+          </article>
+
+          <article class="pain-card" id="cooking">
+            <div>
+              <span class="pain-label">料理</span>
+              <h3>平日の料理に、時間を使いすぎたくない。</h3>
+            </div>
+            <p>
+              切る、煮る、焼く、見張る。
+              手を動かす時間そのものを減らせる家電を調査します。
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="latest">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="section-number">03 / FIRST RADAR</div>
+            <h2 class="section-title">最初に調べるモノ</h2>
+          </div>
+
+          <p class="section-description">
+            「人気だから」ではなく、家事をどれだけ減らせるかで見ます。
+          </p>
+        </div>
 
         <article class="feature-card">
 
           <div class="feature-visual">
-
-            <div class="fan-icon">
-              <div class="fan-head"></div>
-              <div class="fan-center"></div>
-              <div class="fan-handle"></div>
+            <div class="dishwasher-icon">
+              <div class="dishwasher-window">皿</div>
             </div>
-
           </div>
 
           <div class="feature-copy">
-
             <div class="tag">RADAR #001</div>
 
             <h3>
-              今年のハンディファン、<br>
-              風だけじゃない。
+              工事不要の食洗機は、<br>
+              本当に家事を減らせる？
             </h3>
 
             <p>
-              注目されているのは「冷却プレート付き」。
-              普通のハンディファンと何が違うのか、
-              選ぶときに見るべきポイントを調査します。
+              賃貸や工事が難しい家庭でも導入しやすい
+              タンク式・工事不要タイプの食洗機を調査予定です。
+              サイズ、給水方法、容量、手入れなどを比較します。
             </p>
 
-            <!-- 後で記事ページへのリンクに変更 -->
-            <a href="#" class="text-link">
-              READ ARTICLE
-              <span class="arrow">→</span>
-            </a>
-
+            <span class="button">記事準備中</span>
           </div>
+
         </article>
-
       </div>
     </section>
 
 
-    <!-- NEW RADAR -->
-    <section id="new">
+    <section>
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="section-number">02 / LATEST</div>
-            <h2 class="section-title">NEW RADAR</h2>
+            <div class="section-number">04 / UPCOMING</div>
+            <h2 class="section-title">これから調査するテーマ</h2>
           </div>
-
-          <p class="section-description">
-            気になる商品をひとつずつ調査。
-            スペックだけでなく、選ぶ理由まで掘り下げます。
-          </p>
         </div>
 
+        <div class="article-grid">
 
-        <div class="articles-grid">
+          <article class="article-card">
+            <div class="article-no">#002 / CLEANING</div>
+            <div>
+              <h3>ロボット掃除機で、床掃除はどこまで減らせる？</h3>
+              <p>吸引・水拭き・自動ゴミ収集などを整理予定。</p>
+              <span class="status">COMING SOON</span>
+            </div>
+          </article>
 
-          <a href="#" class="article-card">
+          <article class="article-card">
+            <div class="article-no">#003 / LAUNDRY</div>
             <div>
-              <div class="article-no">#001</div>
-              <div class="article-icon">❄︎</div>
+              <h3>「洗濯物を干さない」を実現するには？</h3>
+              <p>乾燥機・除湿機・乾燥付き洗濯機を比較予定。</p>
+              <span class="status">COMING SOON</span>
             </div>
-            <div>
-              <h3>冷却プレート付きハンディファン</h3>
-              <p>今年のハンディファン、風だけじゃない。</p>
-            </div>
-          </a>
+          </article>
 
+          <article class="article-card">
+            <div class="article-no">#004 / COOKING</div>
+            <div>
+              <h3>料理を任せられる自動調理家電を調査。</h3>
+              <p>材料を入れた後、どこまで放置できるかを見ます。</p>
+              <span class="status">COMING SOON</span>
+            </div>
+          </article>
 
-          <a href="#" class="article-card">
+          <article class="article-card">
+            <div class="article-no">#005 / CLEANING</div>
             <div>
-              <div class="article-no">#002</div>
-              <div class="article-icon">▣</div>
+              <h3>風呂掃除をラクにする電動ブラシは必要？</h3>
+              <p>手洗いとの違い、重さ、充電、ブラシ形状を調査予定。</p>
+              <span class="status">COMING SOON</span>
             </div>
-            <div>
-              <h3>小型モバイルバッテリー</h3>
-              <p>小さいのに、大容量。</p>
-            </div>
-          </a>
+          </article>
 
+          <article class="article-card">
+            <div class="article-no">#006 / DAILY LIFE</div>
+            <div>
+              <h3>自動開閉ゴミ箱は、本当に便利なのか。</h3>
+              <p>センサー精度・電源・容量・ニオイ対策を整理予定。</p>
+              <span class="status">COMING SOON</span>
+            </div>
+          </article>
 
-          <a href="#" class="article-card">
+          <article class="article-card">
+            <div class="article-no">#007 / LAUNDRY</div>
             <div>
-              <div class="article-no">#003</div>
-              <div class="article-icon">⌖</div>
+              <h3>衣類スチーマーでアイロンは減らせる？</h3>
+              <p>立ち上がり・重量・連続使用時間などを比較予定。</p>
+              <span class="status">COMING SOON</span>
             </div>
-            <div>
-              <h3>スマートタグ</h3>
-              <p>「どこいった？」をなくす。</p>
-            </div>
-          </a>
-
-
-          <a href="#" class="article-card">
-            <div>
-              <div class="article-no">#004</div>
-              <div class="article-icon">▤</div>
-            </div>
-            <div>
-              <h3>工事不要の食洗機</h3>
-              <p>工事なしで、食洗機。</p>
-            </div>
-          </a>
-
-
-          <a href="#" class="article-card">
-            <div>
-              <div class="article-no">#005</div>
-              <div class="article-icon">◎</div>
-            </div>
-            <div>
-              <h3>電動空気入れ</h3>
-              <p>空気入れ、もう手でやらない。</p>
-            </div>
-          </a>
-
-
-          <a href="#" class="article-card">
-            <div>
-              <div class="article-no">#006</div>
-              <div class="article-icon">□</div>
-            </div>
-            <div>
-              <h3>自動開閉ゴミ箱</h3>
-              <p>触らず、捨てる。</p>
-            </div>
-          </a>
+          </article>
 
         </div>
       </div>
     </section>
 
 
-    <!-- CATEGORY -->
-    <section id="category">
+    <section>
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="section-number">03 / EXPLORE</div>
-            <h2 class="section-title">CATEGORY</h2>
+            <div class="section-number">05 / HOW WE CHECK</div>
+            <h2 class="section-title">MONO RADARの見方</h2>
           </div>
         </div>
 
-        <div class="category-grid">
+        <div class="how-grid">
 
-          <a href="#" class="category">
-            <span>01</span>
-            <span>ガジェット</span>
-          </a>
+          <div class="how-card">
+            <div class="how-no">01</div>
+            <h3>何を減らせる？</h3>
+            <p>
+              商品スペックより先に、
+              どの家事・どの工程を減らせるのかを確認します。
+            </p>
+          </div>
 
-          <a href="#" class="category">
-            <span>02</span>
-            <span>家電</span>
-          </a>
+          <div class="how-card">
+            <div class="how-no">02</div>
+            <h3>本当に使い続けられる？</h3>
+            <p>
+              サイズ、手入れ、収納、準備など、
+              導入後に増える手間も確認します。
+            </p>
+          </div>
 
-          <a href="#" class="category">
-            <span>03</span>
-            <span>生活用品</span>
-          </a>
-
-          <a href="#" class="category">
-            <span>04</span>
-            <span>季節用品</span>
-          </a>
-
-          <a href="#" class="category">
-            <span>05</span>
-            <span>防災</span>
-          </a>
+          <div class="how-card">
+            <div class="how-no">03</div>
+            <h3>誰に向いている？</h3>
+            <p>
+              すべての人に同じ商品を勧めず、
+              暮らし方や予算に合わせて整理します。
+            </p>
+          </div>
 
         </div>
-
       </div>
     </section>
 
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="container about-grid">
 
@@ -997,56 +1058,50 @@
         </div>
 
         <div class="about-copy">
-
           <h2>
-            買う前に、<br>
-            理由を知る。
+            家事を上手にするより、<br>
+            家事そのものを減らす。
           </h2>
 
           <p>
             MONO RADAR（モノレーダー）は、
-            SNSやネットで話題になっている商品を探知し、
-            「なぜ人気なのか」を調査する商品発見メディアです。
+            毎日の家事をラクにするモノを探すメディアです。
           </p>
 
           <p>
-            メーカー情報、商品スペック、価格帯、
-            利用シーンなどを確認しながら、
-            選ぶときに知っておきたいポイントを整理します。
+            「時短できる」という言葉だけではなく、
+            実際にどの工程を減らせるのか、
+            導入することで別の手間が増えないかまで確認します。
           </p>
 
           <p>
-            流行っているから買うのではなく、
-            自分に合う理由があるかを見極める。
-            そのためのレーダーを目指します。
+            掃除・洗濯・料理・食器洗い・片付けを中心に、
+            時短家電や便利グッズを調査・比較していきます。
           </p>
 
           <div class="about-highlight">
-            いま売れてるモノには、理由がある。
+            家事の「めんどくさい」を、モノで減らす。
           </div>
-
         </div>
+
       </div>
     </section>
 
 
-    <!-- AFFILIATE DISCLOSURE -->
     <div class="disclosure">
       <div class="container">
-
         <p>
           当サイトでは、商品・サービスの紹介にアフィリエイト広告を利用する場合があります。
           掲載内容は可能な限り正確な情報を提供するよう努めていますが、
-          価格・在庫・仕様等の最新情報については各販売サイトおよびメーカー公式サイトをご確認ください。
+          価格・在庫・仕様等の最新情報については、
+          各販売サイトおよびメーカー公式サイトをご確認ください。
         </p>
-
       </div>
     </div>
 
   </main>
 
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
 
@@ -1058,8 +1113,8 @@
         </div>
 
         <div class="footer-copy">
-          いま売れてるモノには、理由がある。<br>
-          Product Discovery Media
+          家事の「めんどくさい」を、モノで減らす。<br>
+          Housework Efficiency Media
         </div>
 
       </div>
